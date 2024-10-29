@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    
+    <h2>Videos</h2>
+    <p>Total Videos: {{ videos | length }}</p>
+    <ul>
+        {% for video in videos %}
+            <li>{{ video }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Labs</h2>
+    <p>Total Labs: {{ labs | length }}</p>
+    <ul>
+        {% for lab in labs %}
+            <li>{{ lab }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Durations</h2>
+    <p>Total Video Duration: {{ total_duration }}</p>
+    <p>Duration at 1.25x Speed: {{ adjusted_duration }}</p>
+    
+    <a href="/">Go Back</a>
+</body>
+</html>
